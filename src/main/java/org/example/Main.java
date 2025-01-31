@@ -21,5 +21,6 @@ public class Main {
 
         CustomListener listener = new CustomListener();
         ParseTreeWalker.DEFAULT.walk(listener, tree);
+        System.out.println(listener.symbolTable.table);
     }
 }
