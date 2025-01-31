@@ -146,3 +146,4 @@ ParseTreeWalker.DEFAULT.walk(listener, tree);
 ```
 
 # Step3
+Adding symbol table and filling it.
