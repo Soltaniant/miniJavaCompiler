@@ -211,14 +211,6 @@ public class TypeChecker extends MiniJavaBaseListener {
     }
 
     @Override
-    public void exitEveryRule(ParserRuleContext ctx) {
-        System.out.println(ctx.getText());
-        Type[] temp = new Type[1000];
-        typeChecker.copyInto(temp);
-        Arrays.stream(temp).filter(Predicate.not(Objects::isNull)).forEach(t -> t.getElementType());
-    }
-
-    @Override
     public void exitMethodCallExpression(MiniJavaParser.MethodCallExpressionContext ctx) {
         Stack<Type> args = new Stack<>();
 

@@ -8,10 +8,7 @@ import org.example.symboltable.records.Class;
 import org.example.symboltable.records.Method;
 import org.example.symboltable.records.Variable;
 
-@RequiredArgsConstructor
 public class SymbolTableCreator extends MiniJavaBaseListener {
-
-    private final MiniJavaParser parser;
 
     @Getter
     private SymbolTable symbolTable;

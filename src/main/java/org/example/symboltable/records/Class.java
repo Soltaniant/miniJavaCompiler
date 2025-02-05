@@ -9,8 +9,8 @@ import java.util.Map;
 @Getter
 public class Class extends Element{
 
-    private Map<String, Method> methods;
-    private Map<String, Variable> globalVars;
+    private final Map<String, Method> methods;
+    private final Map<String, Variable> globalVars;
 
     @Setter
     private String parentClassId;
