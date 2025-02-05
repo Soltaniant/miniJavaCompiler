@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.MiniJavaBaseListener;
 import org.example.MiniJavaParser;
 import org.example.symboltable.SymbolTable;
-import org.example.symboltable.records.Class;
+import org.example.symboltable.elements.Class;
 
 import java.util.ArrayList;
 import java.util.List;

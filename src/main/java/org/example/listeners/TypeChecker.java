@@ -1,18 +1,14 @@
 package org.example.listeners;
 
-import org.antlr.v4.runtime.ParserRuleContext;
 import org.example.MiniJavaBaseListener;
 import org.example.MiniJavaParser;
 import org.example.symboltable.SymbolTable;
 import org.example.symboltable.Type;
-import org.example.symboltable.records.*;
-import org.example.symboltable.records.Class;
+import org.example.symboltable.elements.*;
+import org.example.symboltable.elements.Class;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.Stack;
-import java.util.function.Predicate;
 
 public class TypeChecker extends MiniJavaBaseListener {
 

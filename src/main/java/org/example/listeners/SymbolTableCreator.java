@@ -1,12 +1,11 @@
 package org.example.listeners;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import org.example.*;
 import org.example.symboltable.SymbolTable;
-import org.example.symboltable.records.Class;
-import org.example.symboltable.records.Method;
-import org.example.symboltable.records.Variable;
+import org.example.symboltable.elements.Class;
+import org.example.symboltable.elements.Method;
+import org.example.symboltable.elements.Variable;
 
 public class SymbolTableCreator extends MiniJavaBaseListener {
 

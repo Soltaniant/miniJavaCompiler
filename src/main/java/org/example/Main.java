@@ -5,9 +5,8 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.example.listeners.InheritanceListener;
-import org.example.listeners.ScopeCheckingStatements;
+import org.example.listeners.ScopeCheckerListener;
 import org.example.listeners.SymbolTableCreator;
-import org.example.listeners.TypeChecker;
 import org.example.utils.FileReaderUtil;
 
 import java.io.*;
@@ -31,7 +30,7 @@ public class Main {
         InheritanceListener inheritance = new InheritanceListener(sbBuilder.getSymbolTable());
         walker.walk(inheritance, tree);
 
-        ScopeCheckingStatements verifier = new ScopeCheckingStatements(inheritance.getSymbolTable());
+        ScopeCheckerListener verifier = new ScopeCheckerListener(inheritance.getSymbolTable());
 
         walker.walk(verifier, tree);
         verifier.getSymbolTable().printSymbolTable();

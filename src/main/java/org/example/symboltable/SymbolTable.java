@@ -1,9 +1,9 @@
 package org.example.symboltable;
 import lombok.Getter;
-import org.example.symboltable.records.Class;
-import org.example.symboltable.records.Method;
-import org.example.symboltable.records.Program;
-import org.example.symboltable.records.Variable;
+import org.example.symboltable.elements.Class;
+import org.example.symboltable.elements.Method;
+import org.example.symboltable.elements.Program;
+import org.example.symboltable.elements.Variable;
 
 import java.util.Map;
 

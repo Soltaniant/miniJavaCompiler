@@ -1,4 +1,4 @@
-package org.example.symboltable.records;
+package org.example.symboltable.elements;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

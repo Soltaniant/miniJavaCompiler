@@ -1,7 +1,7 @@
 package org.example.symboltable;
 
 import lombok.Getter;
-import org.example.symboltable.records.Class;
+import org.example.symboltable.elements.Class;
 
 public class Type {
 

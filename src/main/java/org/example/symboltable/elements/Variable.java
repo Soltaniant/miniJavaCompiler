@@ -1,4 +1,4 @@
-package org.example.symboltable.records;
+package org.example.symboltable.elements;
 
 
 public class Variable extends Element  {
