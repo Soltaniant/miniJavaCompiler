@@ -21,26 +21,27 @@ type                :    'int'
                     |    'boolean'
                     |    Identifier;
 
-statement           :    '{' statement* '}' //block
-                    |    'if' '(' expression ')' statement 'else' statement
-                    |    'while' '(' expression ')' statement
-                    |    'System.out.println' '(' expression ')' ';'
-                    |    Identifier '=' expression ';'
-                    |    Identifier '[' expression ']' '=' expression ';';
 
-expression          :    expression '.length'
-                    |    expression '[' expression ']'
-                    |    expression '.' Identifier '(' ( expressionList )? ')' //method call
-                    |    expression Relation expression
-                    |    'this'
-                    |    'new' 'int' '[' expression ']' //array declaration
-                    |    'new' Identifier '(' ')' //instantiation
-                    |    '!' expression
-                    |    '(' expression ')'
-                    |    IntegerLiteral
-                    |    Decimal
-                    |    Boolean
-                    |    Identifier;
+statement           :    '{' statement* '}' #BlockStatement
+                    |    'if' '(' expression ')' statement 'else' statement #IfStatement
+                    |    'while' '(' expression ')' statement #WhileStatement
+                    |    'System.out.println' '(' expression ')' ';' #PrintExpression
+                    |    Identifier '=' expression ';' #AssignmentStatement
+                    |    Identifier '[' expression ']' '=' expression ';' #ArrayAssignmentStatement;
+
+expression          :    expression '.length' #LengthExpression
+                    |    expression '[' expression ']' #ArrayIndexExpression
+                    |    expression '.' Identifier '(' ( expressionList )? ')' #MethodCallExpression
+                    |    expression Relation expression #OperationExpression
+                    |    'this' #ThisExpression
+                    |    'new' 'int' '[' expression ']' #ArrayDeclarationExpression
+                    |    'new' Identifier '(' ')' #ObjectInstantiationExpression
+                    |    '!' expression #NotExpression
+                    |    '(' expression ')' #GroupExpression
+                    |    IntegerLiteral #IntegerExpression
+                    |    Decimal #DecimalExpression
+                    |    Boolean #BooleanExpression
+                    |    Identifier #IdentifierExpression;
 
 expressionList      :   expression ( ',' expression )*;
 
