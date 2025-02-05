@@ -6,11 +6,10 @@ import lombok.Setter;
 import java.util.HashMap;
 import java.util.Map;
 
+@Getter
 public class Class extends Element{
 
-    @Getter
     private Map<String, Method> methods;
-    @Getter
     private Map<String, Variable> globalVars;
 
     @Setter
